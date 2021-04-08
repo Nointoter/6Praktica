@@ -9,24 +9,24 @@ int ch = 1;
 //n - размерность матрицы b
 void copyM(int* a, int* b, int ib, int jb, int n) {
 	int i, j, k;
-	int imax = ib + n / 2;      //до какого индекса строки копируем
-	int jmax = jb + n / 2;      //аналогично по столбцам
+	int imax = ib + n / 2;
+	int jmax = jb + n / 2;
 
 	for (k = 0, i = ib; i < imax; i++) {
 		for (j = jb; j < jmax; j++) {
-			a[k++] = b[i * n + j];  //в матрице a элементы идут подряд
+			a[k++] = b[i * n + j];
 		}
 	}
 }
 
 void copy(int* a, int** b, int ib, int jb, int n) {
 	int i, j, k;
-	int imax = ib + n / 2;      //до какого индекса строки копируем
-	int jmax = jb + n / 2;      //аналогично по столбцам
+	int imax = ib + n / 2;
+	int jmax = jb + n / 2;
 
 	for (k = 0, i = ib; i < imax; i++) {
 		for (j = jb; j < jmax; j++) {
-			a[k++] = b[i][j];  //в матрице a элементы идут подряд
+			a[k++] = b[i][j];
 		}
 	}
 }
